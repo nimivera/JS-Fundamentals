@@ -1,19 +1,9 @@
-const num = parseInt(process.argv[2]);
+const args = process.argv.length - 2; // Subtract 2 to exclude node and script name
 
-// Recursive function to compute factorial
-function factorial(n) {
-  if (isNaN(n) || n < 0) return 1; // Factorial of NaN or negative is 1
-  if (n === 0) return 1;
-  return n * factorial(n - 1);
-  if (isNaN(n) || n < 0) {
-    return 1; 
-  }
-  else if (n === 0) {
-    return 1;
-  }else{
-    return n * factorial(n - 1);
-  }
-  
+if (args === 0) {
+  console.log('No argument');
+} else if (args === 1) {
+  console.log('Argument found');
+} else {
+  console.log('Arguments found');
 }
-
-// Print the result
