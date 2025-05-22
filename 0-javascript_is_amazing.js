@@ -1,4 +1,7 @@
-const myVar = "JavaScript is amazing";
-console.log(myVar);
-// Output: JavaScript is amazionst myVar = "JavaScript is amazing";
-console.log(myVar);ng
+const args = process.argv.slice(2);
+
+if (!args[0]) {
+  console.log('No argument');
+} else {
+  console.log(args[0]);
+}
