@@ -1,7 +1,9 @@
-const args = process.argv.slice(2);
-
-if (!args[0]) {
-  console.log('No argument');
-} else {
-  console.log(args[0]);
-}
+function factorial(n) {
+    if (isNaN(n)) return 1;
+    const num = parseInt(n);
+    if (num <= 1) return 1;
+    return num * factorial(num - 1);
+  }
+  
+  const input = process.argv[2];
+  console.log(factorial(input));
